@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
   <div class="container">
-    <form>
+    <form action="<?= base_url('create') ?>" method="post">
       <h1>Cadastro</h1>
 
       <div class="input-group">
@@ -32,9 +32,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <input type="password" name="password" id="password">
       </div>
 
-      <button>Finalizar</button>
+      <button type="submit">Finalizar</button>
 
-      <a href="#">Já tem uma conta? Faça login</a>
+      <a href="login">Já tem uma conta? Faça login</a>
     </form>
   </div>
 </body>

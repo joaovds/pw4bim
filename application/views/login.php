@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       <button>Entrar</button>
 
-      <a href="cadastro.html">Não tem uma conta? Cadastre-se</a>
+      <a href="register">Não tem uma conta? Cadastre-se</a>
     </form>
   </div>
 </body>
