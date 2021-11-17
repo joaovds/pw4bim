@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <title>Cadastro</title>
 </head>
 <body>
+  <?php if(!(!!$this->session->userdata('logado'))) { ?>
   <div class="container">
     <form action="<?= base_url('create') ?>" method="post">
       <h1>Cadastro</h1>
@@ -37,5 +38,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <a href="login">Já tem uma conta? Faça login</a>
     </form>
   </div>
+  <?php } else { redirect(base_url()); }; ?>
 </body>
 </html>

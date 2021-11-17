@@ -22,10 +22,16 @@ class UserModel extends CI_Model {
     $user = $this->db->get('tb_user')->row_array();
 
     if($user) {
+      $this->session->set_userdata('logado', $user);
       redirect(base_url('index.php'));
     } else {
       redirect(base_url('login'));
     }
+  }
+
+  public function logout() {
+    $this->session->unset_userdata('logado');
+    redirect(base_url('login'));
   }
 }
 ?>
