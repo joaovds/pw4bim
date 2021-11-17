@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
   <div class="container">
-    <form>
+    <form action="<?= base_url('logar') ?>" method="post">
       <h1>Login</h1>
 
       <div class="input-group">
@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <span>Esqueci minha senha</span>
       </div>
 
-      <button>Entrar</button>
+      <button type="submit">Entrar</button>
 
       <a href="register">Não tem uma conta? Cadastre-se</a>
     </form>
