@@ -33,5 +33,11 @@ class UserModel extends CI_Model {
     $this->session->unset_userdata('logado');
     redirect(base_url('login'));
   }
+
+  public function delete($cd) {
+    $this->db->where('cd', $cd);
+    $this->db->delete('tb_user');
+    redirect(base_url('login'));
+  }
 }
 ?>

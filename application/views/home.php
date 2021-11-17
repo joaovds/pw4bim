@@ -31,16 +31,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="infos-card">
         <div class="input-group">
           <label for="name">Nome</label>
-          <input type="text" name="name" id="name" value="João Victor" readonly>
+          <input type="text" name="name" id="name" value="<?= $_SESSION['logado']['name'] ?>" readonly>
         </div>
 
         <div class="input-group">
           <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" value="email@teste.com" readonly>
+          <input type="email" name="email" id="email" value="<?= $_SESSION['logado']['email'] ?>" readonly>
         </div>
 
-        <button>Editar</button>
-        <button class="secondary-button">Excluir conta</button>
+        <form action="">
+          <button>Editar</button>
+        </form>
+        
+        <form method="delete" action="<?= base_url('delete/'.$_SESSION['logado']['cd']) ?>">
+          <button class="secondary-button">Excluir conta</button>
+        </form>
       </div>
     </main>
   </div>
