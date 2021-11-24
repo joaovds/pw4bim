@@ -5,6 +5,7 @@ class Home extends CI_Controller {
   public function __construct() {
     parent::__construct();
     $this->load->model('UserModel');
+    $this->lang->load('home', 'portuguese');
   }
 
   public function index() {
@@ -23,4 +24,3 @@ class Home extends CI_Controller {
     redirect(base_url('login'));
   }
 }
-?>

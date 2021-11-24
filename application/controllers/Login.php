@@ -5,6 +5,7 @@ class Login extends CI_Controller {
   public function __construct() {
     parent::__construct();
     $this->load->model('UserModel');
+    $this->lang->load('login', 'portuguese');
   }
 
   public function index() {
@@ -17,4 +18,3 @@ class Login extends CI_Controller {
     $user->login();
   }
 }
-?>
